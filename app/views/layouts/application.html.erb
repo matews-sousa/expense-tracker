@@ -9,7 +9,9 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
   <body>
-    <%= render 'layouts/navbar' %>
+    <% unless current_page?(new_user_session_path) || current_page?(new_user_registration_path) %>
+      <%= render 'layouts/navbar' %>
+    <% end %>
     <main>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
