@@ -9,12 +9,10 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
   <body>
-    <% unless current_page?(new_user_session_path) || current_page?(new_user_registration_path) %>
+    <% unless controller_name == 'registrations' or controller_name == 'sessions' %>
       <%= render 'layouts/navbar' %>
     <% end %>
     <main>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
       <%= yield %>
     </main>
   </body>
