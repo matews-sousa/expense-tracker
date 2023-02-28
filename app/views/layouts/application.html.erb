@@ -11,9 +11,11 @@
   <body>
     <% unless controller_name == 'registrations' or controller_name == 'sessions' %>
       <%= render 'layouts/navbar' %>
-    <% end %>
-    <main class="px-10 mt-6">
+      <main class="px-10 mt-6">
+        <%= yield %>
+      </main>
+    <% else %>
       <%= yield %>
-    </main>
+    <% end %>
   </body>
 </html>

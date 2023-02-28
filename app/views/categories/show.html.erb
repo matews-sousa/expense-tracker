@@ -1,10 +1,12 @@
 <p style="color: green"><%= notice %></p>
-
-<%= render @category %>
-
-<div>
-  <%= link_to "Edit this category", edit_category_path(@category) %> |
-  <%= link_to "Back to categories", categories_path %>
-
-  <%= button_to "Destroy this category", @category, method: :delete %>
-</div>
+<header class="flex justify-between items-center">
+  <h1 class="text-3xl font-semibold">
+    <%= @category.name %>
+    -
+    <%= @category.category_type.upcase %>
+  </h1>
+  <div class="flex gap-4">
+    <%= link_to "Edit", edit_category_path(@category), class: 'btn btn-info' %>
+    <%= button_to "Delete", @category, method: :delete, class: 'btn btn-error' %>
+  </div>
+</header>

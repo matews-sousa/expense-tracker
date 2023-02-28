@@ -1,14 +1,6 @@
 <p style="color: green"><%= notice %></p>
 <header class="flex items-center justify-between">
   <h1 class="text-3xl font-semibold">Categories</h1>
-  <%= link_to 'New Category', new_category_path, class: 'btn' %>
+  <%= link_to 'New Category', new_category_path, class: 'btn btn-success' %>
 </header>
-<div id="categories">
-  <% @categories.each do |category| %>
-    <%= render category %>
-    <p>
-      <%= link_to "Show this category", category %>
-    </p>
-  <% end %>
-</div>
-<%= link_to "New category", new_category_path %>
+<%= render 'categories/table' %>
