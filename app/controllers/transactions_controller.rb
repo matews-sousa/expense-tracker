@@ -4,7 +4,7 @@ class TransactionsController < ApplicationController
 
   # GET /transactions or /transactions.json
   def index
-    @transactions = Transaction.where(user: current_user).joins(:category)
+    @transactions = Transaction.where(user: current_user).joins(:category).order(date: :desc)
   end
 
   # GET /transactions/1 or /transactions/1.json
@@ -13,13 +13,13 @@ class TransactionsController < ApplicationController
 
   # GET /transactions/new
   def new
-    @categories = Category.where(user: current_user).map { |category| [category.name, category.id] }
+    categories
     @transaction = Transaction.new
   end
   
   # GET /transactions/1/edit
   def edit
-    @categories = Category.where(user: current_user).map { |category| [category.name, category.id] }
+    categories
   end
 
   # POST /transactions or /transactions.json
@@ -65,6 +65,10 @@ class TransactionsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_transaction
       @transaction = Transaction.find(params[:id])
+    end
+
+    def categories
+      @categories = Category.where(user: current_user).map { |category| [category.name, category.id] }
     end
 
     # Only allow a list of trusted parameters through.
