@@ -1,5 +1,8 @@
 <p style="color: green"><%= notice %></p>
-<h1 class="text-4xl font-semibold">Categories</h1>
+<header class="flex items-center justify-between">
+  <h1 class="text-3xl font-semibold">Categories</h1>
+  <%= link_to 'New Category', new_category_path, class: 'btn' %>
+</header>
 <div id="categories">
   <% @categories.each do |category| %>
     <%= render category %>
