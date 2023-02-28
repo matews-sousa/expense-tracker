@@ -16,10 +16,10 @@ class TransactionsController < ApplicationController
     @categories = Category.where(user: current_user).map { |category| [category.name, category.id] }
     @transaction = Transaction.new
   end
-
+  
   # GET /transactions/1/edit
   def edit
-    @categories = Category.where(user: current_user)
+    @categories = Category.where(user: current_user).map { |category| [category.name, category.id] }
   end
 
   # POST /transactions or /transactions.json

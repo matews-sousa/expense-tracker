@@ -9,7 +9,7 @@
       </ul>
     </div>
   <% end %>
-  <div class="form-control">
+  <div class="form-control mt-6">
     <%= form.label :amount, class: 'label label-text' %>
     <%= form.number_field :amount, class: 'input input-bordered' %>
   </div>
@@ -23,9 +23,10 @@
   </div>
   <div class="form-control">
     <%= form.label :category_id, class: 'label label-text' %>
-    <%= form.select :category_id, options_for_select(categories), {}, class: 'select select-bordered' %>
+    <%= form.select :category_id, options_for_select(categories, transaction.category_id), {}, class: 'select select-bordered' %>
   </div>
-  <div>
-    <%= form.submit "Create", class: 'btn btn-success mt-6' %>
+  <div class="flex gap-4 items-center mt-6">
+    <%= link_to "Cancel", transactions_path, class: 'btn btn-outline' %>
+    <%= form.submit "Create", class: 'btn btn-success' %>
   </div>
 <% end %>
