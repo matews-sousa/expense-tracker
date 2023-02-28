@@ -1,6 +1,6 @@
-<nav class="flex items-center justify-between px-10 py-6">
+<nav class="flex items-center justify-between px-4 md:px-10 py-6">
   <%= link_to 'Finances', root_path, class: 'text-3xl font-bold text-green-600' %>
-  <ul class="flex items-center space-x-4">
+  <ul class="hidden md:flex items-center space-x-4">
     <li>
       <%= link_to 'Dashboard', root_path, class: "px-4 py-3 rounded-md text-gray-500 font-medium #{'text-white bg-gray-700' if current_page?(root_path)}" %>
     </li>
