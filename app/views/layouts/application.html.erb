@@ -12,7 +12,7 @@
   <body>
     <% unless controller_name == 'registrations' or controller_name == 'sessions' %>
       <%= render 'layouts/navbar' %>
-      <main class="px-10 mt-6">
+      <main class="px-10 py-6">
         <%= yield %>
       </main>
     <% else %>

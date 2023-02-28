@@ -6,7 +6,7 @@
     <%= pie_chart @total_per_category, responsive: true, legend: "top", library: { backgroundColor: 'transparent' } %>
   </div>
   <div class="col-span-2 bg-gray-800 rounded-md p-4">
-    <h2 class="text-2xl font-semibold mb-4">Incomes and Expenses per month</h2>
-    <%= line_chart @transactions.group(:category_type).group_by_month(:date).sum(:amount), responsive: true, legend: "top", library: { backgroundColor: 'transparent' } %>
+    <h2 class="text-2xl font-semibold mb-4">Categories per month</h2>
+    <%= line_chart @transactions.group(:name).group_by_month(:date).sum(:amount), responsive: true, legend: "top", library: { backgroundColor: 'transparent' } %>
   </div>
 </div>

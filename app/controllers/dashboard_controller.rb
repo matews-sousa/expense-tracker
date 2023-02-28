@@ -5,8 +5,6 @@ class DashboardController < ApplicationController
     @categories = current_user.categories
     @transactions = current_user.transactions.includes(:category)
 
-    @total_per_category = @transactions.includes(:category).group(:name).sum(:amount)
-
-    puts @transactions.group(:category_type).group_by_month(:date).sum(:amount)
+    @total_per_category = @transactions.group(:name).sum(:amount)
   end
 end
