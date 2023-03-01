@@ -10,6 +10,11 @@ class TransactionsController < ApplicationController
   # GET /transactions/1 or /transactions/1.json
   def show
     authorize @transaction
+    @transactions = Transaction.where()
+      .not(id: @transaction.id)
+      .where(user: current_user, category_id: @transaction.category_id)
+      .joins(:category)
+      .order(date: :desc)
   end
 
   # GET /transactions/new
