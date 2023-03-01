@@ -9,6 +9,7 @@ class TransactionsController < ApplicationController
 
   # GET /transactions/1 or /transactions/1.json
   def show
+    authorize @transaction
   end
 
   # GET /transactions/new
@@ -19,6 +20,7 @@ class TransactionsController < ApplicationController
   
   # GET /transactions/1/edit
   def edit
+    authorize @transaction
     categories
   end
 
@@ -53,6 +55,7 @@ class TransactionsController < ApplicationController
 
   # DELETE /transactions/1 or /transactions/1.json
   def destroy
+    authorize @transaction
     @transaction.destroy
 
     respond_to do |format|

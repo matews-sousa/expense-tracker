@@ -80,3 +80,5 @@ end
 gem "chartkick", "~> 5.0"
 
 gem "groupdate", "~> 6.2"
+
+gem "pundit", "~> 2.3"
