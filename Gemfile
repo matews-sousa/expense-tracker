@@ -82,3 +82,5 @@ gem "chartkick", "~> 5.0"
 gem "groupdate", "~> 6.2"
 
 gem "pundit", "~> 2.3"
+
+gem "dockerfile-rails", ">= 1.2", :group => :development
