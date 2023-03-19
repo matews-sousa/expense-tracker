@@ -1,6 +1,10 @@
 # Finances App
 
+![finances-thumb](https://user-images.githubusercontent.com/63426656/226148785-0c108670-5fe3-4ce6-9a14-2012d9868de9.png)
+
 This is a Ruby on Rails web application for managing transactions. Users can register their transactions with categories such as income and expenses, and view statistics about them.
+
+You can use the application at https://finances-expense-tracker.fly.dev
 
 ## 🚀 Features
 
