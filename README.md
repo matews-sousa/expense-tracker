@@ -1,24 +1,30 @@
-# README
+# Finances App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Ruby on Rails web application for managing transactions. Users can register their transactions with categories such as income and expenses, and view statistics about them.
 
-Things you may want to cover:
+## 🚀 Features
 
-* Ruby version
+- User authentication: Users can create an account, log in, and manage their transactions.
+- Transaction management: Users can register their transactions with categories such as income, expenses, savings, and investments.
+- Dashboard: Users can view statistics about their transactions, including total income, total expenses, and net worth.
+- Categories management: Users can manage their transaction categories, including adding, updating, and deleting them.
 
-* System dependencies
+## 🛠️ Getting started
 
-* Configuration
+To run this application locally, you'll need to have Ruby 3.2, Rails 7 and Node v18.15.0. Once you have those set up, follow these steps:
 
-* Database creation
+1. Clone the repository: `git clone https://github.com/matews-sousa/expense-tracker.git`
+2. Navigate to the project directory: `cd transaction-management-app`
+3. Install the dependencies: `bundle install`
+4. Set up the database: `rails db:create && rails db:migrate`
+5. Start the server: `bin/dev`
 
-* Database initialization
+The application should now be accessible at http://localhost:3000/. If you make changes to the JavaScript code, Tailwind classes or the Rails application, the server will automatically reload. 
 
-* How to run the test suite
+## 🌎 Deployment
 
-* Services (job queues, cache servers, search engines, etc.)
+This application can be deployed to any cloud platform that supports Ruby on Rails applications. We recommend using [Fly.io](https://fly.io/), a modern platform for deploying and scaling applications.
 
-* Deployment instructions
+## 👥 Contributing
 
-* ...
+If you'd like to contribute to this project, please fork the repository, make your changes, and submit a pull request. We welcome contributions of all kinds, including bug fixes, new features, and improvements to the documentation.
