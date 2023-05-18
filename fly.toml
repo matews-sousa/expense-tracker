@@ -7,6 +7,11 @@ primary_region = "gig"
 processes = []
 
 [env]
+  RUBY_VERSION = "3.2.1"
+
+[build]
+  [build.args]
+    RUBY_VERSION = "3.2.1"
 
 [experimental]
   auto_rollback = true
